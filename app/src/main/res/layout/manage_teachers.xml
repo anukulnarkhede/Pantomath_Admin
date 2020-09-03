@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerlayoutTeacher"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageTeachers.ManageTeachers"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#ffffff"
+
+
+
+
+    >
+
+    <!--tools:openDrawer="start"-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchBarTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/search_bar_bg"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardElevation="4dp"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/hamIconTeacher"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="6dp"
+                app:srcCompat="@drawable/hamburger"
+
+
+                tools:ignore="OnClick" />
+
+
+
+            <ImageView
+                android:id="@+id/CrossTeacher"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/cross"
+
+                />
+
+            <EditText
+
+                android:id="@+id/SearchEditTextMTeacher"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical|center"
+                android:layout_marginStart="54dp"
+                android:layout_marginEnd="52dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:singleLine="true"
+                android:inputType="textImeMultiLine"
+                android:imeOptions="actionSearch|actionDone"
+                android:textColor="#121212"
+                android:cursorVisible="true"
+                android:textColorHint="#999"
+                android:hint="Search in teachers"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:backgroundTint="#fff"
+                android:paddingStart="0dp"
+                tools:ignore="HardcodedText,RtlSymmetry"
+                android:focusable="true" />
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayoutTeacher"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchBarTeacher"
+
+            android:layout_marginTop="-24dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:paddingHorizontal="16dp"
+
+                android:id="@+id/RecyclerViewTeachers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-24dp"
+                android:background="#fff"
+                android:clipToPadding="false"
+
+                android:overScrollMode="never"
+                android:paddingTop="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/AddTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/all_subject_bg_selector"
+            android:drawableStart="@drawable/add"
+            android:drawablePadding="12dp"
+            android:elevation="12dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="16dp"
+            android:text="Add Teacher"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:translationZ="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardcodedText" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/HomeNavigationDrawerTeacher"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/ham_menu"
+        android:background="#ffffff"
+        />
+
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

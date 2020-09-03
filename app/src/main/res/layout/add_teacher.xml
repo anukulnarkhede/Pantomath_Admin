@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageTeachers.AddTeacher.AddTeacher"
+    android:background="#fff"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:translationZ="2dp"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/AddTeacherToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#fff"
+
+            >
+
+            <TextView
+
+                android:id="@+id/toolbar_titleSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="sans-serif-medium"
+                android:text="Add Teacher"
+                android:textColor="#121212"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/NextAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_butt"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Next"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/selectClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Class"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/classcontainer"
+        app:layout_constraintTop_toBottomOf="@+id/selectClass"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        >
+
+    <CheckBox
+        android:id="@+id/Class9th"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:button="@drawable/class_selector_9th"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectClass" />
+
+    <CheckBox
+        android:id="@+id/Class10th"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/class_selector_10th"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/Class9th"
+        app:layout_constraintTop_toTopOf="@+id/Class9th" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/selectBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Board"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classcontainer"
+        tools:ignore="HardcodedText" />
+
+
+   <HorizontalScrollView
+       android:id="@+id/containerBoard"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:scrollbars="none"
+       app:layout_constraintTop_toBottomOf="@id/selectBoard"
+       >
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <CheckBox
+            android:id="@+id/SSC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:button="@drawable/ssc_board_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectBoard" />
+
+        <CheckBox
+            android:id="@+id/CBSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cbse_board_selector"
+            app:layout_constraintStart_toEndOf="@+id/SSC"
+            app:layout_constraintTop_toBottomOf="@+id/selectBoard" />
+
+
+        <CheckBox
+            android:id="@+id/ICSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:button="@drawable/icse_selector"
+            app:layout_constraintEnd_toEndOf="@+id/containerBoard"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="@+id/containerBoard"
+            app:layout_constraintTop_toBottomOf="@+id/containerBoard" />
+
+    </LinearLayout>
+
+
+   </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/SelectSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Subject"
+        android:layout_marginStart="24dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerBoard"
+        tools:ignore="HardcodedText" />
+
+
+    <Spinner
+        android:id="@+id/SubjectSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/SelectSubject"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_spinner_background"
+        android:layout_marginHorizontal="16dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

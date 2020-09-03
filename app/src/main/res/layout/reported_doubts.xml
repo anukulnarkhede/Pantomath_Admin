@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.ReportedDoubts"
+    android:background="#ffffff"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:translationZ="0dp"
+        app:elevation="0dp"
+        android:background="#F20C0C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/DashToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            android:translationZ="0dp"
+            app:elevation="0dp"
+            android:background="#F20C0C"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            >
+
+            <TextView
+
+                android:id="@+id/toolbar_DoubtsDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="sans-serif-medium"
+                android:text="Reported doubts"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeReported"
+        android:layout_below="@+id/appBarLayout"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:paddingHorizontal="16dp"
+
+        android:id="@+id/RecyclerViewReportedDoubt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:background="#fff"
+        android:clipToPadding="false"
+        android:elevation="0dp"
+        android:overScrollMode="never"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

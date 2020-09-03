@@ -1,0 +1,104 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:listDivider"> @android:color/transparent </item>
+        <item name="android:windowLightStatusBar"
+            tools:ignore="NewApi">true</item>
+
+
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+
+        <item name="android:windowLightNavigationBar"
+            tools:ignore="NewApi">true</item>
+    </style>
+
+
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar"
+        >
+
+        <item name="android:windowBackground"
+            >@drawable/background_splashscreen
+
+
+        </item>
+
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+
+    </style>
+
+
+    <style name="imageView" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:statusBarColor">#fff</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+        <item name="android:windowFullscreen">true</item>
+
+
+    </style>
+
+
+
+<!--    <style name="HomeScreen" parent="Theme.AppCompat.Light.NoActionBar">-->
+
+<!--        <item name="android:statusBarColor">#fff</item>-->
+<!--        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>-->
+<!--        <item name="colorPrimary">@color/blue</item>-->
+<!--        <item name="colorAccent">@color/blue</item>-->
+<!--        <item name="android:navigationBarColor">#FF2829</item>-->
+<!--        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+
+
+<!--    </style>-->
+
+
+
+    <style name="Reported" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:statusBarColor">#F20C0C</item>
+        <item name="android:listDivider"> @android:color/transparent </item>
+
+
+
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+
+        <item name="android:windowLightNavigationBar"
+            tools:ignore="NewApi">true</item>
+    </style>
+
+
+
+
+
+
+    <style name="MaterialAlertDialog_rounded" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+    </style>
+
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
+
+
+
+</resources>

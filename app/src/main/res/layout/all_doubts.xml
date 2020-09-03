@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerlayoutAllDoubts"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllDoubts.AllDoubts"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#ffffff"
+
+
+
+
+    >
+
+    <!--tools:openDrawer="start"-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchBarAllDoubts"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/search_bar_bg"
+                android:elevation="8dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardElevation="4dp"
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/hamIconAllDoubts"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    app:srcCompat="@drawable/hamburger"
+
+
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/Cross"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:scaleType="centerCrop"
+                    android:padding="10dp"
+
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/cross"
+
+                    />
+
+                <EditText
+
+                    android:id="@+id/SearchEditTextAllDoubts"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical|center"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginEnd="52dp"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:singleLine="true"
+                    android:inputType="textImeMultiLine"
+                    android:imeOptions="actionSearch|actionDone"
+                    android:textColor="#121212"
+                    android:cursorVisible="true"
+                    android:textColorHint="#999"
+                    android:hint="Search in doubts"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:backgroundTint="#fff"
+                    android:paddingStart="0dp"
+                    tools:ignore="HardcodedText,RtlSymmetry"
+                    android:focusable="true" />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayoutAllDoubts"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchBarAllDoubts"
+
+            android:layout_marginTop="-24dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:paddingHorizontal="16dp"
+
+                android:id="@+id/RecyclerViewAllDoubts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-24dp"
+                android:background="#fff"
+                android:clipToPadding="false"
+                android:elevation="0dp"
+                android:overScrollMode="never"
+                android:paddingTop="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/HomeNavigationDrawerAllDoubts"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/ham_menu"
+        android:background="#ffffff"
+
+
+        />
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

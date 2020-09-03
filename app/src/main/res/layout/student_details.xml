@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ManageStudents.StudentDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:elevation="0dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/StudentDetailToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#fff">
+
+            <TextView
+
+                android:id="@+id/toolbar_name_Student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="sans-serif-medium"
+                android:text="Mayuresh Abhyankar"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+
+                android:layout_marginEnd="16dp"
+                android:id="@+id/StatusOFStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="sans-serif-medium"
+                android:text="Suspended"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/ProfilePic_Student"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/profile_defult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SuspendedbySD" />
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/teacher_no_of_doubtCard"
+                android:background="@drawable/doubt_card_bg_physics"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/ProfilePic_Student"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/NoOftotalDoubtsSD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/blue"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/DoubtsSolvedSD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doubt solved"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/NoOftotalDoubtsSD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#999999"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/ShowAllDoubtsSD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show all doubts"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/subject_button_bg_phy_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/nameTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/teacher_no_of_doubtCard"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/StudentNameDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mayuresh Abhyankar"
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/nameTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="HardcodedText" />
+
+
+
+
+            <TextView
+                android:id="@+id/EmailTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/StudentNameDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/EmailStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jiaj@gmail.com"
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/EmailTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="HardcodedText" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/ClassTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/EmailStudent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/ClassTeacherSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9th and 10th"
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/ClassTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="HardcodedText" />
+
+
+
+            <TextView
+                android:id="@+id/BoardTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Board"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/ClassTeacherSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/BoardSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SSC"
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/BoardTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/PhoneTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/BoardSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/PhoneSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/PhoneTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:autoLink="phone"
+                tools:ignore="HardcodedText" />
+
+
+
+            <TextView
+                android:id="@+id/AddressTagSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif"
+                app:layout_constraintTop_toBottomOf="@+id/PhoneSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/AddressSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aurangabad"
+                android:textSize="16sp"
+                android:textColor="#121212"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTagSD"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="HardcodedText" />
+
+
+            <Button
+                android:id="@+id/BolckButtSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/subject_button_bg_selector"
+                android:drawableStart="@drawable/block"
+                android:drawablePadding="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                android:text="Suspend account"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddressSD"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/ActivateButtSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/subject_button_bg_geog_selector"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Activate account"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textAllCaps="false"
+                android:textColor="#009F37"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddressSD"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+            <TextView
+                android:id="@+id/SuspendedbySD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+
+                android:text=""
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+    >
+
+
+
+
+    <item android:id="@+id/ActivityDashboard"
+
+        android:title="Activity Dashboard"
+        tools:ignore="HardcodedText"
+        android:icon="@drawable/ic_dashboard"
+        
+        />
+
+
+    <item android:id="@+id/Manage"
+        android:title="Manage"
+        tools:ignore="HardcodedText">
+
+
+        <menu>
+        <item android:id="@+id/AllDoubts"
+            android:title="All Doubts"
+            android:icon="@drawable/ic_all_inbox"
+            tools:ignore="HardcodedText" />
+
+
+            <item android:id="@+id/ManageTeachers"
+                android:title="Manage Teachers"
+                android:icon="@drawable/ic_manage_teacher"
+                tools:ignore="HardcodedText" />
+
+            <item android:id="@+id/ManageStudents"
+                android:title="Manage Students"
+                android:icon="@drawable/ic_manage_students"
+                tools:ignore="HardcodedText" />
+
+            <item android:id="@+id/StudentRequests"
+                android:title="Student Requests"
+                android:icon="@drawable/ic_student_request"
+                tools:ignore="HardcodedText" />
+
+
+
+        </menu>
+
+
+    </item>
+
+
+
+    <item android:id="@+id/Other"
+        android:title="Other"
+        tools:ignore="HardcodedText">
+
+
+        <menu>
+            <item android:id="@+id/Notifications"
+                android:title="Notifications"
+                android:icon="@drawable/ic_notifications"
+                tools:ignore="HardcodedText" />
+
+
+            <item android:id="@+id/Settings"
+                android:title="Feedback"
+                android:icon="@drawable/feedback"
+                tools:ignore="HardcodedText" />
+
+
+            <item android:id="@+id/About"
+                android:title="About"
+                android:icon="@drawable/info"
+                tools:ignore="HardcodedText" />
+
+
+
+        </menu>
+
+
+    </item>
+
+
+
+
+    <item android:id="@+id/Logoutt"
+        android:title="Log Out"
+        tools:ignore="HardcodedText">
+
+
+        <menu>
+
+
+            <item android:id="@+id/Logout"
+                android:title="Log Out this account"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+
+        </menu>
+
+
+    </item>
+
+
+
+
+</menu>

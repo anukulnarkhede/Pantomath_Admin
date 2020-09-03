@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/CardBgTeacher"
+    android:layout_marginBottom="24dp"
+    android:background="#ffffff"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicTeacher"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="4dp"
+
+        android:src="@drawable/profile_defult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/UserNameTeacher" />
+
+    <TextView
+        android:id="@+id/UserNameTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/timetextTeacher"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="1"
+
+        android:text="Anukul Narkhede"
+        android:layout_marginStart="16dp"
+        android:textColor="#121212"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/profilePicTeacher"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/timetextTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif"
+        android:gravity="end"
+        android:text=" "
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/SubjectTagTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        app:layout_constraintStart_toStartOf="@+id/UserNameTeacher"
+        app:layout_constraintTop_toBottomOf="@+id/UserNameTeacher"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/StatusTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#009F37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

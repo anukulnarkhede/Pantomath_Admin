@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerlayoutNotifications"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notifications.Notifications"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#ffffff"
+
+
+
+
+    >
+
+    <!--tools:openDrawer="start"-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            app:elevation="0dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/NotificationToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                android:background="#fff"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                >
+
+                <TextView
+
+                    android:id="@+id/toolbar_Notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Notifications"
+                    android:textColor="#121212"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout"
+            >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="24dp"
+            android:clipToPadding="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/HomeNavigationDrawerNotifications"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/ham_menu"
+        android:background="#ffffff"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

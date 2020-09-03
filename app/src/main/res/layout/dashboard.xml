@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.Dashboard"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#ffffff"
+
+
+
+
+    >
+
+    <!--tools:openDrawer="start"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constFullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:visibility="gone"
+
+
+        >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/FullScreenBgButt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#87000000"
+        />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="16dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:elevation="6dp"
+                android:id="@+id/crossProf"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/cross"
+
+
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/AdminText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="D-Solve - Admin"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/userStatuz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Super-User"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AdminText"
+                    tools:ignore="HardcodedText" />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ProfilePopup"
+                    android:layout_width="98dp"
+                    android:layout_height="98dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/profile_defult"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userStatuz" />
+
+
+                <TextView
+                    android:id="@+id/NameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="User Name"
+                    android:textAlignment="center"
+                    android:textColor="#121212"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ProfilePopup"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/InstituteTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Institute"
+                    android:textAlignment="center"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NameText"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/EmailPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="sans-serif"
+                    android:text="user@gmail.com"
+                    android:textAlignment="center"
+                    android:textColor="#121212"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/InstituteTitle"
+                    tools:ignore="HardcodedText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeDash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:elevation="0dp"
+            android:translationZ="0dp"
+            app:elevation="0dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/DashToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                android:translationZ="0dp"
+                app:elevation="0dp"
+                android:background="#fff"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                >
+
+                <TextView
+
+                    android:id="@+id/toolbar_DoubtsDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="sans-serif-medium"
+                    android:text=""
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ProfilePictureDash"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:padding="8dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/profile_defult"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout"
+
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                tools:ignore="HardcodedText"
+                >
+
+
+                <TextView
+                    android:id="@+id/activityDashtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D-Solve Dashboard"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_solvedUnsolved"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/doubt_card_bg_physics"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText"
+                    app:layout_constraintTop_toBottomOf="@+id/activityDashtext">
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/DoubtCountHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:textColor="@color/blue"
+                        android:textSize="32sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textAlignment="center"
+                         />
+
+                    <TextView
+                        android:id="@+id/totslnoofdoubts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/DoubtCountHome"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="16dp"
+                        android:text="Total Doubts"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+
+                        android:textColor="@color/blue"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/noOfsolved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="16dp"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-black"
+                        app:layout_constraintTop_toBottomOf="@+id/totslnoofdoubts"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#999999"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/solvedText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Solved"
+                        android:textAlignment="center"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/noOfsolved"
+                        app:layout_constraintTop_toBottomOf="@+id/noOfsolved" />
+
+                    <TextView
+                        android:id="@+id/noOfUnsolved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="0"
+                        android:layout_marginStart="40dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toEndOf="@+id/solvedText"
+                        app:layout_constraintTop_toBottomOf="@id/totslnoofdoubts" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Unsolved"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/noOfUnsolved"
+                        app:layout_constraintTop_toBottomOf="@+id/noOfUnsolved" />
+
+                    <Button
+                        android:id="@+id/showAllDoubts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show all Doubts"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/subject_button_bg_phy_selector"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/Analytics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Analytics"
+                    app:layout_constraintTop_toBottomOf="@id/card_solvedUnsolved"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#121212"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/manageCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    app:layout_constraintTop_toBottomOf="@id/Analytics"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="12dp"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/teacherCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/doubt_card_bg_geom"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/noOfTeacher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0"
+                            android:textColor="#9A0D91"
+                            android:textSize="24sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/totalTeacher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Teachers"
+                            android:textColor="#9A0D91"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-medium"
+                            app:layout_constraintStart_toStartOf="@+id/noOfTeacher"
+                            app:layout_constraintTop_toBottomOf="@+id/noOfTeacher"
+
+                            />
+
+
+                        <Button
+                            android:id="@+id/manageTeacher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="54dp"
+                            android:layout_marginTop="38dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/subject_button_bg_geom_selector"
+                            android:paddingHorizontal="16dp"
+                            android:text="Manage"
+                            android:textAllCaps="false"
+                            android:textColor="#9A0D91"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/totalTeacher"
+                            app:layout_constraintTop_toBottomOf="@+id/totalTeacher" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:id="@+id/StudentCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/doubt_card_bg_geog"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/noOfStudent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0"
+                            android:textColor="#009F37"
+                            android:textSize="24sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/totalStudents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Students"
+                            android:textColor="#009F37"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-medium"
+                            app:layout_constraintStart_toStartOf="@+id/noOfStudent"
+                            app:layout_constraintTop_toBottomOf="@+id/noOfStudent"
+
+                            />
+
+
+                        <Button
+                            android:id="@+id/manageStudent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="54dp"
+                            android:layout_marginTop="38dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/subject_button_bg_geog_selector"
+                            android:paddingHorizontal="16dp"
+                            android:text="Manage"
+                            android:textAllCaps="false"
+                            android:textColor="#009F37"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/totalStudents"
+                            app:layout_constraintTop_toBottomOf="@+id/totalStudents" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintGuide_percent="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/Requests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Requests"
+                    app:layout_constraintTop_toBottomOf="@id/manageCards"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#121212"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Requests"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/doubt_card_bg_lang"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/noOfRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#5550B6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="16dp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/noOfRequestText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Pending Requests"
+                        android:textColor="#5550B6"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/noOfRequest"
+                        app:layout_constraintTop_toBottomOf="@+id/noOfRequest"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/NoOfDeleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="request Deleted"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/noOfRequest"
+                        app:layout_constraintTop_toBottomOf="@+id/noOfRequestText"
+
+
+                        />
+
+                    <Button
+                        android:id="@+id/ShowAllRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/subject_button_bg_lang_selector"
+                        android:paddingHorizontal="16dp"
+                        android:text="Show all requests"
+                        android:textAllCaps="false"
+                        android:textColor="#5550B6"
+                        android:textSize="14sp"
+                        android:layout_marginStart="54dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ReportedCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#F20C0C"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/noOfReports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ShowAllReported"
+
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/ReportedDoubt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Doubts reported"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ShowAllReported"
+                app:layout_constraintStart_toStartOf="@+id/noOfReports"
+
+                app:layout_constraintTop_toBottomOf="@+id/noOfReports"
+                tools:ignore="HardcodedText" />
+
+
+            <Button
+                android:id="@+id/ShowAllReported"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/reported_selector"
+                android:text="Show all"
+                android:paddingHorizontal="16dp"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/HomeNavigationDrawer"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/ham_menu"
+        android:background="#ffffff"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
