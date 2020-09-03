@@ -61,6 +61,7 @@ public class About extends AppCompatActivity {
         bulidName.setText(BuildConfig.VERSION_NAME + " - Beta");
 
 
+
     }
 
 
