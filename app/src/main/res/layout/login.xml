@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="D-Solve\nAdmin"
+        android:text="Solved'out\nAdmin"
         android:textAlignment="center"
         android:textSize="38sp"
         android:fontFamily="sans-serif-medium"

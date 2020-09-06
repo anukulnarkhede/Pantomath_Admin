@@ -38,7 +38,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="D-Solve - Admin"
+                android:text="Solved'out - Admin"
                 android:textAlignment="center"
                 android:textColor="@color/blue"
                 android:textSize="18sp"

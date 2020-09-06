@@ -94,7 +94,7 @@
                 android:layout_marginTop="24dp"
                 android:fontFamily="sans-serif"
                 android:textSize="16sp"
-                android:text="Feedback for our D-Solve Team"
+                android:text="Feedback for our Solved'out Team"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="HardcodedText" />
