@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#87000000"
+
         />
 
         <androidx.cardview.widget.CardView
@@ -74,7 +75,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="D-Solve - Admin"
+                    android:text="Solved'out - Admin"
                     android:textAlignment="center"
                     android:textColor="@color/blue"
                     android:textSize="18sp"
